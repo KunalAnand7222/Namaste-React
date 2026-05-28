@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Namaste React</title>
+    <link rel="stylesheet" href="./style.css" />
+    //difference between ./style.css and style.css is that ./style.css is a
+    relative path which means it will look for the file in the same directory as
+    the index.html file, while style.css is an absolute path which means it will
+    look for the file in the root directory of the project. // ./ vs ../ is used
+    to navigate through the directory structure. ./ means the current directory,
+    while ../ means the parent directory. So if you want to access a file that
+    is in the same directory as the index.html file, you can use ./style.css. If
+    you want to access a file that is in the parent directory, you can use
+    ../style.css.
+  </head>
+  <body>
+    <div id="root">
+      <h1>Hello React</h1>
+    </div>
+    <script>
+      const ele = document.createElement("h2");
+      ele.innerHTML = "Namaste React";
+      const root = document.getElementById("root");
+      root.appendChild(ele);
+      //innerhtml vs innertext is that innerhtml will parse the HTML tags and render them as HTML, while innertext will treat the HTML tags as plain text and render them as they are.
+    </script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    //crossorigin is an html attribute used when a browser loads resources from
+    another domain (cross-origin requests).
+    <!-- It controls:
+    whether credentials (cookies/auth) are sent
+    whether the browser allows access to the resource safely
+    CORS behavior -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    //above two lines used to include react and reactdom in our project. //React
+    is responsible for creating and managing the virtual DOM, while ReactDOM is
+    responsible for rendering the virtual DOM to the actual DOM in the browser.
+    <script src="./App.js">
+      // const heading=React.createElement("h1", {id:"heading"}, "Namaste React2");
+      // //take three arguments, first is the type of element we want to create, second is the props (attributes) of the element, and third is the content of the element or child.
+      // const root1=ReactDOM.createRoot(document.getElementById("root"));
+      // root1.render(heading);
+    </script>
+    <!-- order of files always in sequence else it will throw error -->
+  </body>
+</html>
+<!-- A CDN stands for Content Delivery Network is a network of servers distributed around the world that deliver files (images, videos, JavaScript, CSS, fonts, etc.) faster to users. -->
